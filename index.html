@@ -97,7 +97,7 @@
     background-size:56px 56px;
     -webkit-mask-image:radial-gradient(70% 60% at 70% 40%,#000 20%,transparent 75%);mask-image:radial-gradient(70% 60% at 70% 40%,#000 20%,transparent 75%)}
   .hero-in{position:relative;display:grid;gap:36px;align-items:center}
-  .hero h1{font-size:clamp(2.3rem,9.4vw,4rem);font-weight:800;line-height:1.04;margin-top:14px}
+  .hero h1{font-size:clamp(2.1rem,8.4vw,3.7rem);font-weight:800;line-height:1.04;margin-top:14px}
   .hero-sub{margin-top:20px;font-size:1.12rem;color:var(--apagado);max-width:34rem}
   .hero-act{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
   .hero-act .btn{flex:1 1 100%}
@@ -233,6 +233,9 @@
   .row .tx small{display:block;color:var(--apagado);font-size:.86rem;margin-top:2px;line-height:1.4}
   .row .pr{font-family:var(--display);font-weight:700;font-size:1.1rem;text-align:right;white-space:nowrap}
   .row .pr span{font-size:.78rem;color:var(--apagado-2);font-weight:500}
+  .row .pr.free{color:var(--ambar)}
+  .row s{color:var(--apagado-2)}
+  .promo{display:inline-block;vertical-align:middle;margin-left:6px;font-family:var(--sans);font-weight:600;font-size:.7rem;letter-spacing:.02em;color:#1a1100;background:var(--ambar);padding:2px 9px;border-radius:50px}
   .stepper{display:flex;align-items:center;gap:10px}
   .stepper button{width:42px;height:42px;border-radius:10px;background:var(--casco-2);border:1px solid var(--linea);font-size:1.4rem;line-height:1;cursor:pointer;
     display:grid;place-items:center;transition:border-color .2s,color .2s}
@@ -350,8 +353,8 @@
   <div class="wrap hero-in">
     <div>
       <p class="eyebrow entra">Propuesta ARGOS Empresas · 2026</p>
-      <h1 class="entra" style="--d:.08s">Cada gasto de viaje, registrado. Cada anticipo, <span class="gold">bajo control.</span></h1>
-      <p class="hero-sub entra" style="--d:.16s">Su equipo registra por WhatsApp y el gerente lo ve todo, al día y sin pedir reportes.</p>
+      <h1 class="entra" style="--d:.08s">Control de gastos y anticipos de su equipo, <span class="gold">consolidado y al día.</span></h1>
+      <p class="hero-sub entra" style="--d:.16s">Cada colaborador registra sus gastos por WhatsApp contra su anticipo, y la gerencia lo ve todo consolidado, sin pedir reportes.</p>
       <div class="hero-act entra" style="--d:.24s">
         <a href="#como" class="btn btn-gold">Cómo funciona</a>
         <a href="#inversion" class="btn btn-line">Armar mi plan</a>
@@ -384,20 +387,20 @@
       <article class="card reveal">
         <span class="glow"></span>
         <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M17 14.2c2.4 0 4 1.9 4 4.8"/></svg></span>
-        <h3>Cuatro viajeros, cuatro formas de informar</h3>
-        <p>En MC, 4 personas viajan con dinero de la empresa y cada una informa a su manera.</p>
+        <h3>Gastos reportados de formas distintas</h3>
+        <p>Cuatro colaboradores viajan con dinero de la empresa y cada uno informa sus gastos a su manera.</p>
       </article>
       <article class="card reveal" style="--d:.08s">
         <span class="glow"></span>
         <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M16 15h2"/></svg></span>
-        <h3>El anticipo se pierde de vista</h3>
-        <p>Sin un registro único, cuesta saber cuánto del anticipo se gastó y cuánto queda.</p>
+        <h3>Anticipos sin trazabilidad</h3>
+        <p>Sin un registro único, es difícil saber cuánto del anticipo se ha usado y cuánto queda por justificar.</p>
       </article>
       <article class="card reveal" style="--d:.16s">
         <span class="glow"></span>
         <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
-        <h3>El gerente necesita verlo todo</h3>
-        <p>Hoy no hay un reporte unificado. Con ARGOS Empresas, todo llega consolidado al gerente.</p>
+        <h3>Sin reporte consolidado para la gerencia</h3>
+        <p>Hoy no existe un reporte unificado. Con ARGOS Empresas, la gerencia recibe todo en un solo lugar.</p>
       </article>
     </div>
   </div>
@@ -415,7 +418,7 @@
         <div>
           <span class="num">1</span>
           <h3>El gerente entrega el anticipo</h3>
-          <p class="sub">Se lo dice a ARGOS por WhatsApp y confirma. El viaje queda abierto con su monto.</p>
+          <p class="sub">La gerencia registra el anticipo por WhatsApp y ARGOS abre el viaje con su monto.</p>
         </div>
         <div class="mock">
           <div class="chat">
@@ -435,7 +438,7 @@
         <div>
           <span class="num">2</span>
           <h3>El colaborador registra</h3>
-          <p class="sub">Con una foto de la factura o un mensaje corto. ARGOS lo clasifica y le dice cuánto le queda.</p>
+          <p class="sub">El colaborador envía la factura o un mensaje corto; ARGOS clasifica el gasto y le informa su saldo.</p>
         </div>
         <div class="mock">
           <div class="chat">
@@ -464,7 +467,7 @@
         <div>
           <span class="num">3</span>
           <h3>El gerente lo ve todo</h3>
-          <p class="sub">El cierre del día llega a su WhatsApp: una fila por persona, con el gasto y el saldo del anticipo.</p>
+          <p class="sub">La gerencia recibe el cierre del día con el gasto y el saldo del anticipo de cada persona.</p>
           <div class="cierre-viaje">
             <p>Al cerrar el viaje, ARGOS calcula si sobra dinero para devolver o si la empresa debe reembolsar.</p>
             <ul>
@@ -515,10 +518,10 @@
         <ul class="checks">
           <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 7L9 18l-5-5"/></svg><div><b>Hasta 5 números de WhatsApp</b> <span>(1 gerente y 4 colaboradores)</span></div></li>
           <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 7L9 18l-5-5"/></svg><div><b>Gastos por texto, audio o foto de factura</b></div></li>
-          <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 7L9 18l-5-5"/></svg><div><b>Clasificación automática</b> <span>en las categorías de MC</span></div></li>
+          <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 7L9 18l-5-5"/></svg><div><b>Clasificación automática</b> <span>de cada gasto por categoría</span></div></li>
           <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 7L9 18l-5-5"/></svg><div><b>Anticipos, reembolsos y cierre</b> <span>con sobrante o faltante</span></div></li>
           <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 7L9 18l-5-5"/></svg><div><b>Correcciones con confirmación</b> <span>e historial de cada cambio</span></div></li>
-          <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 7L9 18l-5-5"/></svg><div><b>Cierre diario y resumen semanal</b> <span>para el gerente</span></div></li>
+          <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 7L9 18l-5-5"/></svg><div><b>Reportes diarios, semanales y mensuales</b> <span>para el gerente</span></div></li>
           <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 7L9 18l-5-5"/></svg><div><b>Alertas:</b> <span>anticipo por agotarse y gasto sin comprobante</span></div></li>
           <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 7L9 18l-5-5"/></svg><div><b>Consultas libres del gerente por chat</b> <span>(“¿cómo va el viaje de Pedro?”)</span></div></li>
           <li><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 7L9 18l-5-5"/></svg><div><b>Implementación y acompañamiento</b> <span>el primer mes</span></div></li>
@@ -582,8 +585,8 @@
           <div class="pr">$14.00<span>/mes c/u</span></div>
         </div>
         <div class="row">
-          <div class="tx"><b>Implementación</b><small>Pago único · se paga al aceptar · no lleva descuento</small></div>
-          <div class="pr">$150.00</div>
+          <div class="tx"><b>Implementación <span class="promo">Gratis por Navidad</span></b><small>Valor regular <s>$150.00</s> · sin costo en esta propuesta</small></div>
+          <div class="pr free">Gratis</div>
         </div>
       </div>
 
@@ -597,8 +600,8 @@
         <ul class="lines" id="breakdown"></ul>
         <div class="first">
           <div class="fl">Primer pago</div>
-          <div class="fa" id="firstNum">$219.99</div>
-          <div class="fd" id="firstDetail">Implementación $150.00 + primer mes $69.99</div>
+          <div class="fa" id="firstNum">$69.99</div>
+          <div class="fd" id="firstDetail">Primer mes, por adelantado</div>
         </div>
         <p class="foot-note">Precios en dólares, sin IVA. Los primeros 7 días desde la activación son de prueba, sin costo.</p>
       </div>
@@ -610,43 +613,37 @@
 <section class="sec">
   <div class="wrap">
     <p class="eyebrow reveal">Qué necesitamos de ustedes</p>
-    <h2 class="h2 reveal" style="--d:.05s">Seis datos para arrancar</h2>
+    <h2 class="h2 reveal" style="--d:.05s">Lo que necesitamos para arrancar</h2>
     <div class="n-grid">
       <article class="card reveal">
         <span class="glow"></span>
         <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></svg></span>
-        <h3>Datos de facturación</h3>
-        <p>Razón social, RUC y correo de facturación</p>
+        <h3>Datos para la factura</h3>
+        <p>Razón social, RUC y correo, para emitir la factura del servicio.</p>
       </article>
       <article class="card reveal" style="--d:.06s">
         <span class="glow"></span>
         <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M17 14.2c2.4 0 4 1.9 4 4.8"/></svg></span>
         <h3>Su equipo</h3>
-        <p>Nombre, cargo y WhatsApp del gerente y de los 4 colaboradores</p>
+        <p>Nombre, cargo y WhatsApp del gerente y de los 4 colaboradores.</p>
       </article>
       <article class="card reveal" style="--d:.12s">
         <span class="glow"></span>
         <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg></span>
         <h3>Números de trabajo</h3>
-        <p>Que esos números se usen solo para trabajo</p>
+        <p>Que esos números se usen solo para trabajo.</p>
       </article>
       <article class="card reveal">
         <span class="glow"></span>
-        <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M16 15h2"/></svg></span>
-        <h3>Entrega del dinero</h3>
-        <p>Cómo entregan el dinero: un anticipo por viaje o un fondo fijo</p>
+        <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg></span>
+        <h3>Categorías de gasto</h3>
+        <p>Les proponemos una lista base (combustible, alimentación, hospedaje, peajes) y ustedes la ajustan.</p>
       </article>
       <article class="card reveal" style="--d:.06s">
         <span class="glow"></span>
-        <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span>
-        <h3>Categorías y viáticos</h3>
-        <p>Categorías de gasto y si hay viáticos con tope diario</p>
-      </article>
-      <article class="card reveal" style="--d:.12s">
-        <span class="glow"></span>
         <span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3a6 6 0 00-6 6c0 5-2 6-2 6h16s-2-1-2-6a6 6 0 00-6-6zM10 19a2 2 0 004 0"/></svg></span>
-        <h3>Facturas y alertas</h3>
-        <p>Si la factura es obligatoria, y desde qué monto quieren recibir una alerta</p>
+        <h3>Cuándo exigir factura</h3>
+        <p>Desde qué monto un gasto debe tener factura. Si falta, ARGOS avisa al gerente.</p>
       </article>
     </div>
   </div>
@@ -721,7 +718,6 @@ document.documentElement.classList.add('js');
   var BASE_C = 6999;      // plan base, por mes (incluye hasta 5 números)
   var EXTRA_C = 1400;     // cada número adicional, por mes
   var INCL = 5;           // números incluidos en el plan base
-  var IMPL_C = 15000;     // implementación, pago único (sin descuento)
   var DESC_PCT = 15;      // descuento por pago anual sobre la cuota mensual
   var MIN = 1, MAX = 99;
 
@@ -744,7 +740,7 @@ document.documentElement.classList.add('js');
     return { totalNums:totalNums, extras:extras, mensualC:mensualC, anualC:anualC,
              descMesC: mensualC - mensualEqC,
              cuotaC: esAnual ? mensualEqC : mensualC,
-             primerC: IMPL_C + (esAnual ? anualC : mensualC) };
+             primerC: (esAnual ? anualC : mensualC) };   // implementación sin costo: primer pago = primer mes (o el año) por adelantado
   }
 
   function li(html, cls){ var l=document.createElement('li'); if(cls) l.className=cls; l.innerHTML=html; elList.appendChild(l); }
@@ -766,11 +762,12 @@ document.documentElement.classList.add('js');
     li('<span>Plan base (hasta 5 números)</span><b>'+usd(BASE_C)+'</b>');
     if(r.extras>0){ li('<span>Números adicionales ×'+r.extras+'</span><b>'+usd(EXTRA_C*r.extras)+'</b>'); }
     if(anual){ li('<span>Descuento pago anual 15%</span><b>'+usd(-r.descMesC)+'</b>','neg'); }
+    li('<span>Implementación · promoción de Navidad</span><b>Gratis</b>');
 
     elFirst.textContent = usd(r.primerC);
     elFirstD.textContent = anual
-      ? 'Implementación '+usd(IMPL_C)+' + año completo '+usd(r.anualC)
-      : 'Implementación '+usd(IMPL_C)+' + primer mes '+usd(r.mensualC);
+      ? 'Año completo, por adelantado, con 15% de descuento'
+      : 'Primer mes, por adelantado';
   }
 
   document.querySelectorAll('#stColab button').forEach(function(btn){
